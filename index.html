@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <style>
+       *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+       }
+       body{
+        background-color: #f3f3f3;
+       }
+       header{
+        background-color: #131921;
+        color: aliceblue;
+        display: flex;
+        padding: 10px, 20px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+       }
+       .overall{
+        display: flex;
+        align-items: center;
+
+        gap: 15px;
+    }
+    #logo img{
+        height: 60px;
+        margin-top: 0px;
+    }
+    #location-delivery{
+        display: flex;
+        padding: 5px, 10px;
+        align-items: center;
+        cursor: pointer;
+        gap:5px
+    }
+    #location-delivery:hover{
+        border-radius: 3px;
+        border: 1px solid white;
+    }
+    #location-delivery img{
+        width: 20px;
+    }
+    #location-delivery p {
+            font-size: 12px;
+            line-height: 14px;
+        }
+        
+        #location-delivery p span {
+            font-weight: bold;
+            font-size: 14px;
+        }
+    .search-container{
+        display: flex;
+        min-width:300px;
+        max-width: 600px;
+        border: none;
+        border-radius: 3px;
+        
+    }
+    #all{
+        width:30%
+    }
+    #btn{
+        width: 70%;
+    }
+    #btn img{
+        width: 40px;
+    }
+    #search-icon{
+        width: 10%;
+    }
+    .search-container select{
+        border: none;
+        background-color: #f3f3f3;
+        padding: 10px;
+        font-size: 12px;
+        border-radius: 5px,0px,0px,5px;
+        border-right: 1px solid white;
+    }
+    .search-container input{
+        width: 100%;
+        padding: 10px;
+        border: none;
+        font-size: 14px;
+    }
+    .search-container button{
+        background-color: #febd69;
+        border: none;
+        border-radius: 0px,5px,5px,0px;
+        padding: 0px,15px;
+        cursor: pointer;
+    }
+    .search-container button:hover{
+            background-color: #f3a847;
+            
+    }
+    .nav-item{
+        padding: 5px, 10px;
+        cursor: pointer;
+    }
+    .nav-item:hover{
+        border:1px solid white;
+        border-radius: 3px;
+    }
+    .nav-item p:first-child{
+        font-size: 12px;
+    }
+    .nav-item p:last-child{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .cart{
+        display: flex;
+        padding: 5px, 10px;
+        align-items: center;
+        cursor: pointer;
+    }
+    .cart:hover{
+        border: 1px solid white;
+        border-radius: 3px;
+    }
+    .cart img{
+        height: 40px;
+        margin-top: 5px;
+    }
+    .cart span{
+        font-weight: bold;
+        margin-top: 15px;
+        margin-left: 5px;
+    }
+    #language-select{
+        padding: 5px;
+        background-color: transparent;
+        color: #f3f3f3;
+        border: 1px solid #666;
+        border-radius: 3px;
+    }
+    #language-select option{
+        color: white;
+        background-color: #131921;
+    }
+    #digital{
+        display: flex;
+        flex-grow: 1;
+        background-color: hsl(197, 47%, 12%);
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        color: white;
+        margin: 5px, 0px, 0px;
+        padding: 8px,5px;
+        align-items: center;
+    }
+    .menu-pic{
+        display:flex;
+        margin-right: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .menu-pic:hover{
+        border: 1px solid white;
+        border-radius: 3px;
+    }
+    .menu-pic img{
+        width: 20px;
+        }
+    .topic{
+        margin-top: 5px;
+        margin-right: 20px;
+        margin-bottom: 5px;
+    }
+    .topic:hover{
+        border: 1px solid white;
+        border-radius: 3px;
+     }
+     .bgimg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 225vh;
+            height: 200vh;
+            z-index: -1;
+            object-fit: cover;
+            transition: opacity 1s ease-in-out;
+        }
+
+    </style>
+</head>
+
+<body>
+    <img class="bgimg" src="garfir.png" alt="Background Image">
+    
+    <script>
+        const images = [
+            'garfir.png',
+            'bgpic1.png',
+            'bgpic2.png',
+            'bgpic3.png',
+            'bgimg4.png'
+        ];
+        
+        let index = 0;
+        const bgImage = document.querySelector('.bgimg');
+        
+        function changeBackground() {
+            index = (index + 1) % images.length;
+            bgImage.style.opacity = 0;
+            setTimeout(() => {
+                bgImage.src = images[index];
+                bgImage.style.opacity = 1;
+            }, 1000);
+        }
+        
+        setInterval(changeBackground, 10000);
+    </script>
+    <header>
+     <div class="overall">
+
+        <div id="logo">
+        <img src="amazonlogo.png" alt="amazon-logo">
+        </div>
+
+            <div id="location-delivery">
+                <img src="location.png" alt="location img">
+                <div>
+                <p>Deliver to<br><span>Nepal</span></p>
+            </div>
+            </div>
+
+            <div class="search-container">
+                <select id="all">
+                    <option value="volvo" selected>All</option>
+                    <option value="saab"><a href="#">Arts & Crafts</a></option>
+                    <option value="mercedes"><a href="#">Automotive</a></option>
+                    <option value="audi0"><a href="#">Baby</a></option>
+                    <option value="audibeaty"><a href="#">Beauty & Personal Care</a></option>
+                    <option value="books"><a href="#">Books</a></option>
+                    <option value="boy"><a href="#">Boy's Fashion</a></option>
+                    <option value="com"><a href="#">Computers</a></option>
+                    <option value="de"><a href="#"></a>Deals</option>
+                    <option value="di"><a href="#"></a>Digital Music</option>
+                    <option value="ele"><a href="#"></a>Electronics</option>
+                    <option value="sisi"><a href="#"></a>Girl's Fashion</option>
+                    <option value="heal"><a href="#"></a>Health & Household</option>
+                    <option value="home"><a href="#"></a>Home & Kitchen</option>
+                    <option value="indus"><a href="#"></a>Industrial & Scientific</option>
+                    <option value="kindle"><a href="#"></a>Kindle Store</option>
+                    <option value="lugg"><a href="#"></a>Luggage</option>
+                    <option value="m"><a href="#"></a>Men's Fashion</option>
+                    <option value="mov"><a href="#"></a>Movies & TV</option>
+                    <option value="music"><a href="#"></a>Music, CDs & Vinyl</option>
+                    <option value="pet"><a href="#"></a>Pet Suppliers</option>
+                    <option value="prime"><a href="#"></a>Prime Video</option>
+                    <option value="soft"><a href="#"></a>Software</option>
+                    <option value="spe"><a href="#"></a>Sports & Outdoors</option>
+                    <option value="tools"><a href="#"></a>Tools & Home Improvement</option>
+                    <option value="toys"><a href="#"></a>Toys & Games</option>
+                    <option value="vidcam"><a href="#"></a>Video Games</option>
+                    <option value="mowww"><a href="#"></a>Women's Fashion</option>
+                     </select>
+                    <input type="text" placeholder="Search Amazon" name="name1">
+                    <button type="submit" id="btn"><img src="search.png" alt="search" id="search-icon"></button>
+                    
+                    </div>
+        </div>
+            <div class="overall">
+              <select id="language-select" name="language">
+              <option value="en-US">English - EN - America</option>
+              <option value="ar">العربية - AR - الترجمة</option>
+              <option value="de">Deutsch - DE - Übersetzung</option>
+              <option value="he">עברית - HE - תרגום</option>
+              <option value="ko">한국어 - KO - 번역</option>
+              <option value="pt">português - PT - Tradução</option>
+              <option value="zh-CN">中文 (简体) - ZH - 翻译</option>
+              <option value="zh-TW">中文 (繁體) - ZH - 翻譯</option>
+              <option value="es">español - ES - Traducción</option>
+            </select> 
+
+               <div class="nav-item">
+                <p>Hello, signin</p><p>Accounts & Lists</p>
+               </div> 
+
+               <div class="nav-item"> 
+               <p>Returns</p>
+               <p>&Orders</p>
+              </div>
+
+             <div class="cart"><img src="cart.png" alt="cart">
+             <span>0</span> 
+             </div> 
+            </div>
+         
+    </header>
+    <div id="digital">
+
+   <div class="menu-pic">
+        <img src="menu.png" alt="menu-icon">
+     <p>All</p>
+     </div>
+
+    <div class="topic">
+        <p>Today's Deals</p>
+    </div>
+
+    <div class="topic">
+        <p>Registry</p>
+    </div>
+
+    <div class="topic">
+        <p>Customer Service</p>
+    </div>
+
+    <div class="topic">
+        <p>Gift's Card</p>
+    </div>
+
+    <div class="topic">
+        <p>Sales</p>
+    </div>
+</body>
+</html>

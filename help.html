@@ -3,9 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World's Richest Person</title>
+    <title>Amazon</title>
+    <style>
+       *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+       }
+       body{
+        background-color: #f3f3f3;
+       }
+       header{
+        background-color: #131921;
+        color: aliceblue;
+        display: flex;
+        padding: 10px 20px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+       }
+       .overall{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+       }
+       #logo img{
+        height: 60px;
+       }
+       #location-delivery{
+        display: flex;
+        padding: 5px 10px;
+        align-items: center;
+        cursor: pointer;
+        gap: 5px;
+       }
+       #location-delivery:hover{
+        border-radius: 3px;
+        border: 1px solid white;
+       }
+       #location-delivery img{
+        width: 20px;
+       }
+       #location-delivery p {
+        font-size: 12px;
+        line-height: 14px;
+       }
+       #location-delivery p span {
+        font-weight: bold;
+        font-size: 14px;
+       }
+       .table img {
+        width: 100%;
+        height: auto;
+        max-width: 250px;
+        object-fit: contain;
+       }
+       td img {
+        width: 250px;
+        height: 200px;
+        object-fit: cover;
+       }
+    </style>
 </head>
 <body>
-    <p>This is Garima Sedhai. I love myself.</p>
+    <table>
+        <tr class="first">
+            <td>
+                <p>Gaming Accessories</p>
+                <img src="images/gamingaccessories.png" alt="gaming">
+            </td>
+            <td>
+                <p>Shop deals in Fashion</p>
+                <img src="images/clothes.png" alt="clothes">
+            </td>
+            <td>
+                <p>Shop For Your Home Essential</p>
+                <img src="images/home.jpg" alt="home">
+            </td>
+            <td>
+                <p>Get your game on</p>
+                <img src="images/gamingshop.png" alt="pc">
+            </td>
+        </tr>
+        <tr class="second">
+            <td>
+                <p>Top categories in Kitchen Appliances</p>
+                <img src="images/kitchen.png" alt="kitchen">
+            </td>
+            <td>
+                <p>New home arrival under $50</p>
+                <img src="images/decor.png" alt="decor">
+            </td>
+            <td>
+                <p>Refresh your Space</p>
+                <img src="images/fragrance.png" alt="fragrance">
+            </td>
+            <td>
+                <p>Shop Eid Al Fitr Deals</p>
+                <img src="images/sales.png" alt="sales">
+            </td>
+        </tr>
+    </table>
 </body>
 </html>

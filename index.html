@@ -182,55 +182,66 @@
         border: 1px solid white;
         border-radius: 3px;
      }
-     .bgimg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 225vh;
-            height: 200vh;
-            z-index: -1;
-            object-fit: cover;
-            transition: opacity 1s ease-in-out;
+        .table{
+            border: none;
+            width: 100%;
+            background-color: white;
+            position: relative;
+            z-index: 1;
+            border-spacing: 20px;
         }
+        .table img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        max-width: 250px;}
+        td{
+            text-align: center;
+            vertical-align: top;
+            padding: 15px;
+            width: 25%;
+        }
+        .first, .second{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .first p, .second p{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        td img {
+            margin: 15px;
+          width: 250px;
+          height: 200px;
+          object-fit: cover;
+}
+
+         .first a{
+            text-decoration: none;
+            color:rgb(198, 114, 191);
+         }
+         .second a{
+            text-decoration: none;
+            color: rgb(198, 114, 191);
+         }
+
+       
+        
 
     </style>
 </head>
 
 <body>
-    <img class="bgimg" src="gggg.png" alt="Background Image">
-    
-    <script>
-        const images = [
-            'gggg.png',
-            'bgpic1.png',
-            'bgpic2.png',
-            'bgpic3.png',
-            'bgimg4.png'
-        ];
-        
-        let index = 0;
-        const bgImage = document.querySelector('.bgimg');
-        
-        function changeBackground() {
-            index = (index + 1) % images.length;
-            bgImage.style.opacity = 0;
-            setTimeout(() => {
-                bgImage.src = images[index];
-                bgImage.style.opacity = 1;
-            }, 1000);
-        }
-        
-        setInterval(changeBackground, 10000);
-    </script>
-    <header>
+<header>
      <div class="overall">
 
         <div id="logo">
-        <img src="amazonlogo.png" alt="amazon-logo">
+        <img src="images/amazonlogo.png" alt="amazon-logo">
         </div>
 
             <div id="location-delivery">
-                <img src="location.png" alt="location img">
+                <img src="images/location.png" alt="location img">
                 <div>
                 <p>Deliver to<br><span>Nepal</span></p>
             </div>
@@ -268,7 +279,7 @@
                     <option value="mowww"><a href="#"></a>Women's Fashion</option>
                      </select>
                     <input type="text" placeholder="Search Amazon" name="name1">
-                    <button type="submit" id="btn"><img src="search.png" alt="search" id="search-icon"></button>
+                    <button type="submit" id="btn"><img src="images/search.png" alt="search" id="search-icon"></button>
                     
                     </div>
         </div>
@@ -294,19 +305,18 @@
                <p>&Orders</p>
               </div>
 
-             <div class="cart"><img src="cart.png" alt="cart">
+             <div class="cart"><img src="images/cart.png" alt="cart">
              <span>0</span> 
              </div> 
             </div>
          
     </header>
-    <div id="digital">
 
-   <div class="menu-pic">
-        <img src="menu.png" alt="menu-icon">
+    <div id="digital">
+    <div class="menu-pic">
+        <img src="images/menu.png" alt="menu-icon">
      <p>All</p>
      </div>
-
     <div class="topic">
         <p>Today's Deals</p>
     </div>
@@ -326,5 +336,53 @@
     <div class="topic">
         <p>Sales</p>
     </div>
+    </div>
+
+   <table>
+    <tr class="first">
+        <td><p>Gaming Accessories</p><br><br>
+        <img src="images/gamingaccessories.png" alt="gaming"><br><br>
+        <a href="https://www.amazon.com/b/?_encoding=UTF8&node=23508887011&ref_=pd_hp_d_atf_unk">See more</a>
+        </td>
+        <td>
+        <p>Shop deals in Fashion</p><br><br>
+        <img src="images/clothes.png" alt="clothes"><br><br>
+        <a href="https://www.amazon.com/gp/goldbox/?ie=UTF8&ref_=nav_cs_gb&deals-widget=%257B%2522version%2522%253A1%252C%2522viewIndex%2522%253A0%252C%2522presetId%2522%253A%252215E8DB96732AF8CA9C14916141BB1C4C%2522%252C%2522departments%2522%253A%255B%25227147440011%2522%252C%25227192394011%2522%252C%2522679337011%2522%252C%25226358543011%2522%255D%252C%2522sorting%2522%253A%2522FEATURED%2522%257D&bubble-id=15E8DB96732AF8CA9C14916141BB1C4C">See all deals</a>
+        </td>
+        <td>
+        <p>Shop For Your<br>Home essential</p><br>
+        <img src="images/home.jpg" alt="home"><br><br>
+        <a href="https://www.amazon.com/s?k=home&_encoding=UTF8">Discover more in home</a>
+        </td>
+        <td>
+        <p>Get your game on</p><br><br>
+        <img src="images/gamingshop.png" alt="pc"><br><br>
+        <a href="https://www.amazon.com/s?k=gaming&_encoding=UTF8">Shop Gaming</a>
+        </td>
+    </tr>
+    <tr class="second">
+            <td class="first1">
+            <p>Top categories in Kitchen<br> Appliances</p><br>
+            <img src="images/kitchen.png" alt="pc"><br><br>
+            <a href="https://www.amazon.com/s?k=kitchen+products&_encoding=UTF8">Explore all space in kitchen</a>
+            </td>
+            <td>
+                <p>New home arrival under 50$</p><br><br>
+                <img src="images/decor.png" alt="pc"><br><br>
+                <a href="https://www.amazon.com/s?k=home&i=garden&rh=n%3A1055398%2Cp_36%3A-5000&s=exact-aware-popularity-rank&dc&_encoding=UTF8">Shop the latest from Home</a>
+                </td>
+                <td>
+                    <p>Refresh your Space</p><br><br>
+                    <img src="images/fragrance.png" alt="pc"><br><br>
+                    <a href="https://www.amazon.com/s?k=home+and+kitchen&_encoding=UTF8">See more</a>
+                    </td>
+                    <td>
+                        <p>Shop Eid Al Fitr Deals</p><br><br>
+                        <img src="images/sales.png" alt="pc"><br><br>
+                        <a href="https://www.amazon.com/gp/goldbox/?ie=UTF8&ref_=pd_hp_d_atf_unk">All Deals</a>
+                        </td>
+    </tr>
+
+   </table>
 </body>
 </html>
